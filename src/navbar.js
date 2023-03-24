@@ -1,3 +1,7 @@
+import contact from "./contact";
+import home from "./home";
+import menu from "./menu";
+
 const navbar = () => {
   const navBar = document.createElement("div");
   navBar.classList.add("nav-bar");
@@ -29,6 +33,14 @@ const navbar = () => {
   links.appendChild(homeLink);
   links.appendChild(menuLink);
   links.appendChild(contactLink);
+
+  // const homeButton = document.querySelector(".home-link");
+  // const menuButton = document.querySelector(".menu-link");
+  // const contactButton = document.querySelector(".contact-link");
+
+  // homeButton.addEventListener("click", home);
+  // menuButton.addEventListener("click", menu);
+  // contactButton.addEventListener("click", contact);
 };
 
 export default navbar;

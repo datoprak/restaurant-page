@@ -1,7 +1,6 @@
-import navbar from "./navbar";
+const createHome = () => {
+  const content = document.querySelector("#content");
 
-const home = () => {
-  navbar();
   const hero = document.createElement("div");
   hero.classList.add("hero");
   const heroText = document.createElement("div");
@@ -16,7 +15,6 @@ const home = () => {
   const heroImg = document.createElement("img");
   heroImg.classList.add("hero-img");
 
-  const content = document.querySelector("#content");
   content.appendChild(hero);
   hero.appendChild(heroText);
   hero.appendChild(heroImg);
@@ -24,4 +22,16 @@ const home = () => {
   heroText.appendChild(heroSubtext);
 };
 
-export default home;
+const loadHome = () => {
+  const hero = document.querySelector(".hero");
+  const menuContent = document.querySelector(".menu-content");
+  const contact = document.querySelector(".contact");
+
+  if (!hero.classList.contains("active")) {
+    hero.classList.add("active");
+  }
+  menuContent.classList.remove("active");
+  contact.classList.remove("active");
+};
+
+export { createHome, loadHome };
