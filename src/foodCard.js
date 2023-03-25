@@ -1,8 +1,9 @@
-const foodCard = (name, price) => {
+const foodCard = (name, price, image) => {
   const card = document.createElement("div");
   card.classList.add("food-card");
   const foodImage = document.createElement("img");
-  //   foodImage.src = image;
+  foodImage.src = image;
+  foodImage.alt = name;
   const foodInfo = document.createElement("div");
   foodInfo.classList.add("food-text");
   const foodName = document.createElement("div");
